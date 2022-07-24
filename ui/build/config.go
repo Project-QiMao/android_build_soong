@@ -686,7 +686,7 @@ func (c *configImpl) Lunch(ctx Context, product, variant string) {
 
 	c.environ.Set("TARGET_PRODUCT", product)
 	c.environ.Set("TARGET_BUILD_VARIANT", variant)
-	c.environ.Set("TARGET_BUILD_TYPE", "release")
+	//c.environ.Set("TARGET_BUILD_TYPE", "release")
 	c.environ.Unset("TARGET_BUILD_APPS")
 	c.environ.Unset("TARGET_BUILD_UNBUNDLED")
 }
@@ -721,7 +721,7 @@ func (c *configImpl) Tapas(ctx Context, apps []string, arch, variant string) {
 
 	c.environ.Set("TARGET_PRODUCT", product)
 	c.environ.Set("TARGET_BUILD_VARIANT", variant)
-	c.environ.Set("TARGET_BUILD_TYPE", "release")
+	//c.environ.Set("TARGET_BUILD_TYPE", "release")
 	c.environ.Set("TARGET_BUILD_APPS", strings.Join(apps, " "))
 }
 
